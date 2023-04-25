@@ -16,6 +16,7 @@
 
     <modules>
         <module>mallcloud-test</module>
+        <module>mallcloud-config</module>
     </modules>
 
     <properties>
@@ -39,6 +40,19 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <!--  该依赖被用于管理Spring Cloud的各类依赖版本号，避免多个子POM文件重复指定版本号，从而保证项目依赖版本号的一致性  -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

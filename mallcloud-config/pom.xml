@@ -9,20 +9,26 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>mallcloud-test</artifactId>
+    <artifactId>mallcloud-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mallcloud-test</name>
-    <description>mallcloud-test</description>
+    <name>mallcloud-config</name>
+    <description>mallcloud-config</description>
 
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <dependencies>
+        <!-- Spring Cloud Config -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Web (Required for admin endpoints) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
     </dependencies>
 
