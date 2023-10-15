@@ -6,5 +6,6 @@ spring:
     config:
       server:
         git:
+          default-label: main
           uri: https://github.com/shaojunying/MallCloud
           search-paths: /config/
