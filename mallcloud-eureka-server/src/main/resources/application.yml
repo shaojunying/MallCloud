@@ -1,10 +1,6 @@
 server:
   port: 8761
 eureka:
-  instance:
-    hostname: localhost # 当前 Eureka Server 服务所在主机的 hostname
   client:
     register-with-eureka: false # 不注册自己
     fetch-registry: false # 不从注册中心中获取注册信息，因为本身就是注册中心
-    service-url:
-      defaultZone: http://localhost:8761/eureka/ # 默认的注册中心 URL 地址
